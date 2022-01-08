@@ -4,20 +4,28 @@
     <meta charset="UTF-8">
     <title>Maze Generator</title>
     <link rel="stylesheet" href="src/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+
 </head>
 <body>
-<h1>Maze Generator</h1>
-<p>1: Mauer, 2: Ziel, 3: Start</p>
-<div id="cells"><div><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"></div><div><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"></div><div><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"></div><div><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"></div><div><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"></div><div><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"></div><div><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"></div><div><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"></div></div>
-<button id="generate" onclick="solve()">Maze generieren</button>
+<nav id="navbar">
+    made with ☕ by Jаkоb Frömbgеn <a href="https://github.com/ren0x/MIPS_maze_generator" target="_blank"><i class="fab fa-github"></i></a>
+</nav>
+<div class="container">
+    <h1>WS21 ROrg HA, Aufg. 2 - Maze Generator</h1>
+    <p>1: Mauer, 2: Ziel, 3: Start</p>
+    <div id="cells"><div><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"></div><div><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"></div><div><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"></div><div><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"></div><div><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"></div><div><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"></div><div><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"></div><div><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"><input type="number" min="0" max="3"></div></div>
+    <button id="generate" onclick="solve()">Maze generieren</button>
 
-<br>
-<p>Folgenden Text in MARS einfügen:</p>
-<textarea name="" id="tArea" cols="50" rows="9"></textarea>
+    <br>
+    <p>Folgenden Text in MARS einfügen:</p>
+    <textarea name="" id="tArea" cols="50" rows="9"></textarea>
 
-<p>Index von D (= dest in MIPS): <input type="number" id="index"></p>
-<p id="info"><i><small>Beachte: ersetze D (= Destination) per Hand mit einem Wert +1 des Nachbarfeldes!</small></i></p>
-<script src="src/main.js"></script>
-
+    <p>Index von D (= dest in MIPS): <input type="number" id="index"></p>
+    <p id="info"><i><small>Beachte: ersetze D (= Destination) per Hand mit einem Wert +1 des Nachbarfeldes!</small></i></p>
+</div>
+<script src="src/main.min.js"></script>
 </body>
+
 </html>
