@@ -3,7 +3,7 @@
 A JS maze generator for ROrg WS21 Assembly assignment.
 Converts a 2D array into a hexadecimal representation for MIPS `asm`.
 
-Based on the Lee algorithm (https://en.wikipedia.org/wiki/Lee_algorithm/).
+Based on the Lee algorithm (https://en.wikipedia.org/wiki/Lee_algorithm).
 
 **Demo:** https://ren0x.sneekdev.com/MIPS/maze_generator.html
 
